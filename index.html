@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('https://source.unsplash.com/1600x900/?healthy-food');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .hero .btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .categories {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .categories h2 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .categories-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category-card {
+            width: 200px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .category-card p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #ff5722;
+        }
+
+        .restaurants {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .restaurants h2 {
+            font-size: 32px;
+            text-align: center;
+            color: #333;
+        }
+
+        .restaurant-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .restaurant-card {
+            width: 250px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .restaurant-card:hover {
+            transform: scale(1.05);
+        }
+
+        .restaurant-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-card p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QuickBites</h1>
+        <p>Delivering happiness to your doorstep</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Order Your Favorite Food!</h1>
+            <p>Discover the best restaurants and dishes around you.</p>
+            <a href="#" class="btn">Start Exploring</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="https://source.unsplash.com/200x200/?pizza" alt="Pizza">
+                <p>Pizza</p>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/200x200/?burger" alt="Burger">
+                <p>Burger</p>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/200x200/?sushi" alt="Sushi">
+                <p>Sushi</p>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/200x200/?dessert" alt="Dessert">
+                <p>Dessert</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <h2>Featured Restaurants</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <img src="https://source.unsplash.com/200x200/?restaurant" alt="Restaurant 1">
+                <p>Gourmet Kitchen</p>
+            </div>
+            <div class="restaurant-card">
+                <img src="https://source.unsplash.com/200x200/?cafe" alt="Restaurant 2">
+                <p>Cafe Delight</p>
+            </div>
+            <div class="restaurant-card">
+                <img src="https://source.unsplash.com/200x200/?fastfood" alt="Restaurant 3">
+                <p>Fast Bites</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 QuickBites. All rights reserved.</p>
+    </footer>
+</body>
+</html>
